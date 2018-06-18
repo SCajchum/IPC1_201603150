@@ -178,52 +178,7 @@ public class Tablero extends javax.swing.JFrame {
         }
     }
     public void colocarPersonajes(){
-        /*
-        if(jugador.getListaJ1().get(0).getPersonaje().equals(Guerrero)){
-            imageJ1 = imageGuerreroJ1;
-            j1 = Guerrero;
-            imageJ1 = imagePrincesaJ1;
-            j1 = Princesa;
-            imageJ1 = imageMagoJ1;
-            j1 = Mago;
-        } else if (jugador.getListaJ1().get(0).getPersonaje().equals(Princesa)){
-            imageJ1 = imageGuerreroJ1;
-            j1 = Guerrero;
-            imageJ1 = imagePrincesaJ1;
-            j1 = Princesa;
-            imageJ1 = imageMagoJ1;
-            j1 = Mago;
-        }else{
-            imageJ1 = imageGuerreroJ1;
-            j1 = Guerrero;
-            imageJ1 = imagePrincesaJ1;
-            j1 = Princesa;
-            imageJ1 = imageMagoJ1;
-            j1 = Mago;
-        }
-        if(jugador.getListaJ2().get(0).getPersonaje().equals(Guerrero)){
-            imageJ2 = imageGuerreroJ2;
-            j2 = Guerrero;
-            imageJ2 = imagePrincesaJ2;
-            j2 = Princesa;
-            imageJ2 = imageMagoJ2;
-            j2 = Mago;
-        } else if (jugador.getListaJ2().get(0).getPersonaje().equals(Princesa)){
-            imageJ2 = imageGuerreroJ2;
-            j2 = Guerrero;
-            imageJ2 = imagePrincesaJ2;
-            j2 = Princesa;
-            imageJ2 = imageMagoJ2;
-            j2 = Mago;
-        }else{
-            imageJ2 = imageGuerreroJ2;
-            j2 = Guerrero;
-            imageJ2 = imagePrincesaJ2;
-            j2 = Princesa;
-            imageJ2 = imageMagoJ2;
-            j2 = Mago;
-        }
-        */
+        
         if(jugador.getListaJ1().get(0).getPersonaje().equals(Guerrero) && 
                 jugador.getListaJ1().get(1).getPersonaje().equals(Princesa) && 
                 jugador.getListaJ1().get(2).getPersonaje().equals(Mago)){
@@ -288,28 +243,7 @@ public class Tablero extends javax.swing.JFrame {
             j1 = Princesa;
         }
         
-        /*if(jugador.getListaJ2().get(0).getPersonaje().equals(Guerrero)){
-            imageJ2 = imageGuerreroJ2;
-            j2 = Guerrero;
-            imageJ2 = imagePrincesaJ2;
-            j2 = Princesa;
-            imageJ2 = imageMagoJ2;
-            j2 = Mago;
-        } else if (jugador.getListaJ2().get(0).getPersonaje().equals(Princesa)){
-            imageJ2 = imageGuerreroJ2;
-            j2 = Guerrero;
-            imageJ2 = imagePrincesaJ2;
-            j2 = Princesa;
-            imageJ2 = imageMagoJ2;
-            j2 = Mago;
-        }else{
-            imageJ2 = imageGuerreroJ2;
-            j2 = Guerrero;
-            imageJ2 = imagePrincesaJ2;
-            j2 = Princesa;
-            imageJ2 = imageMagoJ2;
-            j2 = Mago;
-        }*/
+        
         if(jugador.getListaJ2().get(0).getPersonaje().equals(Guerrero) && 
                 jugador.getListaJ2().get(1).getPersonaje().equals(Princesa) && 
                 jugador.getListaJ2().get(2).getPersonaje().equals(Mago)){
@@ -526,13 +460,13 @@ public class Tablero extends javax.swing.JFrame {
                                     if(matrizLogica[xx][yy].equals(J1)){
                                         if(jugador.getListaJ1().get(sig).getPersonaje().equals(Guerrero)){
                                             
-               //                             imageJ1 = imageGuerreroJ1;
+        
                                             j1 = Guerrero;
                                         }else if(jugador.getListaJ1().get(sig).getPersonaje().equals(Princesa)){
-                 //                           imageJ1 = imagePrincesaJ1;
+        
                                             j1 = Princesa;
                                         }else{
-                   //                         imageJ1 = imageMagoJ1;
+        
                                             j1 = Mago;
                                         }
                                     //matrizCasillas [xx][yy].setIcon(imageJ1);
@@ -568,13 +502,13 @@ public class Tablero extends javax.swing.JFrame {
                                 for(int y = 0; y<tam; y++){
                                     if(matrizLogica[x][y].equals(J2)){
                                         if(jugador.getListaJ2().get(sig).getPersonaje().equals(Guerrero)){
-                                      //      imageJ2 = imageGuerreroJ2;
+                                      
                                             j2 = Guerrero;
                                         }else if(jugador.getListaJ2().get(sig).getPersonaje().equals(Princesa)){
-                                        //    imageJ2 = imagePrincesaJ2;
+                                      
                                             j2 = Princesa;
                                         }else{
-                                          //  imageJ2 = imageMagoJ2;
+                                      
                                             j2 = Mago;
                                         }
                                     //matrizCasillas [x][y].setIcon(imageJ2);
