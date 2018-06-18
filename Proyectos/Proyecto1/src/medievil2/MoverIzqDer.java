@@ -81,10 +81,10 @@ public class MoverIzqDer extends Thread{
                         if(matrizLogica[fila][columna+1].equals(Mina)){ mina(1); }
                             if(matrizLogica[fila][columna+1].equals(Vida) && (jugador.getVidaJ1()<5 &&
                                     jugador.getVidaJ1()>0)){ vida(); }
-                            //Mueve Jugador - LOGICO
+                            
                             matrizLogica[fila][columna+1] = jugadorActual;
                             matrizLogica[fila][columna] = "";
-                            //Mueve Jugador - GRAFICO
+                            
                             matrizCasillas[fila][columna+1].setIcon(matrizCasillas[fila][columna].getIcon());
                             matrizCasillas[fila][columna].setIcon(new JButton().getIcon());
                             Thread.sleep(500);
@@ -117,14 +117,14 @@ public class MoverIzqDer extends Thread{
                 }
                 if (movimiento.equals(Izq)){
                     if(!matrizLogica[fila][columna-1].equals(jugadorEspera)){
-                            //<editor-fold defaultstate="collapsed" desc="Izquierda">
+                            
                             if(matrizLogica[fila][columna-1].equals(Mina)){ mina(1); }
                             if(matrizLogica[fila][columna-1].equals(Vida) && (jugador.getVidaJ1()<5 &&
                                     jugador.getVidaJ1()>0)){ vida(); }
-                            //Mueve Jugador - LOGICO
+                            
                             matrizLogica[fila][columna-1] = jugadorActual;
                             matrizLogica[fila][columna] = "";
-                            //Mueve Jugador - GRAFICO
+                            
                             matrizCasillas[fila][columna-1].setIcon(matrizCasillas[fila][columna].getIcon());
                             matrizCasillas[fila][columna].setIcon(new JButton().getIcon());
                             Thread.sleep(500);
@@ -227,15 +227,15 @@ public class MoverIzqDer extends Thread{
         }
     public void mina(int danio){
         if(jugadorActual.equals(J1)){
-            //Resta vida - LOGICO
+            
             jugador.setVidaJ1(jugador.getVidaJ1()-danio);
             dan=0; vi=jugador.getVidaJ1(); 
         }else{
-            //Resta vida - LOGICO
+            
             jugador.setVidaJ2(jugador.getVidaJ2()-danio);
             dan=1; vi=jugador.getVidaJ2(); 
         }
-        //Resta vida - GRAFICO
+        
         if(vi==4){
             listaVidas.get(dan).get(4).setIcon(new JButton().getIcon());
         }
@@ -266,15 +266,15 @@ public class MoverIzqDer extends Thread{
     }
     public void vida(){
     if(jugadorActual.equals(J1)){
-            //Resta vida - LOGICO
+        
             jugador.setVidaJ1(jugador.getVidaJ1() + 1);
             dan=0; vi=jugador.getVidaJ1(); 
         }else{
-            //Resta vida - LOGICO
+        
             jugador.setVidaJ2(jugador.getVidaJ2() + 1);
             dan=1; vi=jugador.getVidaJ2(); 
         }
-        //Resta vida - GRAFICO
+        
         if(vi==1){
             listaVidas.get(dan).get(0).setIcon(vida);
         }
