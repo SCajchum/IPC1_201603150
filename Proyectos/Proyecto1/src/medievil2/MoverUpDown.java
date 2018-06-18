@@ -82,10 +82,10 @@ public class MoverUpDown extends  Thread{
                         if(matrizLogica[fila+1][columna].equals(Mina)){ mina(1); }
                             if(matrizLogica[fila+1][columna].equals(Vida) && (jugador.getVidaJ1()<5 &&
                                     jugador.getVidaJ1()>0)){ vida(); }
-                            //Mueve Jugador - LOGICO
+                            
                             matrizLogica[fila+1][columna] = jugadorActual;
                             matrizLogica[fila][columna] = "";
-                            //Mueve Jugador - GRAFICO
+                            
                             matrizCasillas[fila+1][columna].setIcon(matrizCasillas[fila][columna].getIcon());
                             matrizCasillas[fila][columna].setIcon(new JButton().getIcon());
                             Thread.sleep(500);
@@ -122,10 +122,10 @@ public class MoverUpDown extends  Thread{
                             if(matrizLogica[fila-1][columna].equals(Mina)){ mina(1); }
                             if(matrizLogica[fila-1][columna].equals(Vida) && (jugador.getVidaJ1()<5 &&
                                     jugador.getVidaJ1()>0)){ vida(); }
-                            //Mueve Jugador - LOGICO
+                            
                             matrizLogica[fila-1][columna] = jugadorActual;
                             matrizLogica[fila][columna] = "";
-                            //Mueve Jugador - GRAFICO
+                            
                             matrizCasillas[fila-1][columna].setIcon(matrizCasillas[fila][columna].getIcon());
                             matrizCasillas[fila][columna].setIcon(new JButton().getIcon());
                             Thread.sleep(500);
@@ -224,15 +224,15 @@ public class MoverUpDown extends  Thread{
         }
     public void mina(int danio){
         if(jugadorActual.equals(J1)){
-            //Resta vida - LOGICO
+            
             jugador.setVidaJ1(jugador.getVidaJ1()-danio);
             dan=0; vi=jugador.getVidaJ1(); 
         }else{
-            //Resta vida - LOGICO
+            
             jugador.setVidaJ2(jugador.getVidaJ2()-danio);
             dan=1; vi=jugador.getVidaJ2(); 
         }
-        //Resta vida - GRAFICO
+        
         if(vi==4){
             listaVidas.get(dan).get(4).setIcon(new JButton().getIcon());
         }
@@ -263,15 +263,15 @@ public class MoverUpDown extends  Thread{
     }
     public void vida(){
     if(jugadorActual.equals(J1)){
-            //Resta vida - LOGICO
+        
             jugador.setVidaJ1(jugador.getVidaJ1() + 1);
             dan=0; vi=jugador.getVidaJ1(); 
         }else{
-            //Resta vida - LOGICO
+        
             jugador.setVidaJ2(jugador.getVidaJ2() + 1);
             dan=1; vi=jugador.getVidaJ2(); 
         }
-        //Resta vida - GRAFICO
+        
         if(vi==1){
             listaVidas.get(dan).get(0).setIcon(vida);
         }
